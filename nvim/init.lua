@@ -10,5 +10,4 @@ require "coffe.treesitter"
 require "coffe.nvim-tree"
 require "coffe.live-server"
 require "coffe.trouble"
-require "coffe.ft"
 
