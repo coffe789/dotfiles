@@ -4,6 +4,7 @@ local servers = {
 	"pyright",
 	"jsonls",
   "clangd",
+  "quick_lint_js",
 }
 
 local settings = {
@@ -31,6 +32,14 @@ if not lspconfig_status_ok then
 end
 
 local opts = {}
+
+lspconfig.gdscript.setup{
+    on_attach = require("coffe.lsp.handlers").on_attach,
+    flags = {
+      debounce_text_changes = 150,
+    },
+		capabilities = require("coffe.lsp.handlers").capabilities,
+}
 
 for _, server in pairs(servers) do
 	opts = {

@@ -18,8 +18,12 @@ vim.g.maplocalleader = " "
   keymap("n", "<C-k>", "<C-w>k", opts)
   keymap("n", "<C-l>", "<C-w>l", opts)
 
+  keymap("n", "<leader>lj", "<cmd>lua vim.diagnostic.goto_next({buffer=0})<cr>", opts)
+  keymap("n", "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev({buffer=0})<cr>", opts)
+	keymap("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+
   keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
-  keymap("n", "<leader>fg", ":Telescope grep_string<CR>", opts)
+  keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
 
   keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts) -- file tab
 

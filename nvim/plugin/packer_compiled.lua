@@ -119,6 +119,14 @@ _G.packer_plugins = {
     path = "/home/coffe789/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["live-server.nvim"] = {
+    commands = { "LiveServer", "LiveServerStart", "LiveServerStop" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/coffe789/.local/share/nvim/site/pack/packer/opt/live-server.nvim",
+    url = "https://github.com/aurum77/live-server.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/home/coffe789/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -128,6 +136,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/coffe789/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["neovim-remote"] = {
+    loaded = true,
+    path = "/home/coffe789/.local/share/nvim/site/pack/packer/start/neovim-remote",
+    url = "https://github.com/mhinz/neovim-remote"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -188,10 +201,28 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/coffe789/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/home/coffe789/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
+  },
+  ["vim-godot"] = {
+    loaded = true,
+    path = "/home/coffe789/.local/share/nvim/site/pack/packer/start/vim-godot",
+    url = "https://github.com/habamax/vim-godot"
   }
 }
 
 time([[Defining packer_plugins]], false)
+
+-- Command lazy-loads
+time([[Defining lazy-load commands]], true)
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file LiveServerStop lua require("packer.load")({'live-server.nvim'}, { cmd = "LiveServerStop", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file LiveServer lua require("packer.load")({'live-server.nvim'}, { cmd = "LiveServer", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file LiveServerStart lua require("packer.load")({'live-server.nvim'}, { cmd = "LiveServerStart", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+time([[Defining lazy-load commands]], false)
+
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

@@ -78,8 +78,28 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
 
+  -- Icons
   use "kyazdani42/nvim-web-devicons"
+
+  -- Window
   use "kyazdani42/nvim-tree.lua"
+
+  -- Godot
+  use "habamax/vim-godot"
+  use "mhinz/neovim-remote"
+
+  use({
+    "aurum77/live-server.nvim",
+      run = function()
+        require"live_server.util".install()
+      end,
+      cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
+  })
+
+use {
+  "folke/trouble.nvim",
+  requires = "kyazdani42/nvim-web-devicons",
+}
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
