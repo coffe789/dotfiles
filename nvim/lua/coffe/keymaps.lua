@@ -14,11 +14,13 @@ vim.g.maplocalleader = " "
 -- Normal --
 
   -- Wrapped line navigation
-
   keymap("n", "j", "gj", opts)
   keymap("n", "k", "gk", opts)
   keymap("n", "gj", "j", opts)
   keymap("n", "gk", "k", opts)
+
+  keymap("n", "z=", "z=1<CR><CR>", opts)
+
   -- Better window navigation
   keymap("n", "<C-h>", "<C-w>h", opts)
   keymap("n", "<C-j>", "<C-w>j", opts)
