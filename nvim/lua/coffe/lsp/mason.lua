@@ -1,6 +1,6 @@
 
 local servers = {
-	"sumneko_lua",
+	-- "lua-ls",
 	"pyright",
 	"jsonls",
   "clangd",

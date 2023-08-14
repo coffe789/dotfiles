@@ -83,6 +83,7 @@ return packer.startup(function(use)
 
   -- Window
   use "kyazdani42/nvim-tree.lua"
+  require'nvim-tree'.setup {}
   -- Tab
   use "akinsho/bufferline.nvim"
 
@@ -93,6 +94,8 @@ return packer.startup(function(use)
   -- Godot
   use "habamax/vim-godot"
   use "mhinz/neovim-remote"
+
+  use 'ThePrimeagen/vim-be-good'
 
   use({
     "aurum77/live-server.nvim",
