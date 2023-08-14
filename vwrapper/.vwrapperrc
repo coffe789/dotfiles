@@ -1,6 +1,0 @@
-imap jk <esc>
-noremap H :bprevious<CR>
-noremap L :bnext<CR>
-set autoindent
-set ignorecase
-set hlsearch

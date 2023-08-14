@@ -12,6 +12,13 @@ vim.g.maplocalleader = " "
 
 
 -- Normal --
+
+  -- Wrapped line navigation
+
+  keymap("n", "j", "gj", opts)
+  keymap("n", "k", "gk", opts)
+  keymap("n", "gj", "j", opts)
+  keymap("n", "gk", "k", opts)
   -- Better window navigation
   keymap("n", "<C-h>", "<C-w>h", opts)
   keymap("n", "<C-j>", "<C-w>j", opts)
@@ -35,8 +42,15 @@ vim.g.maplocalleader = " "
   keymap("n", "<S-l>", ":bnext<CR>", opts)
   keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
+  --keymap("n", "<C-d>", ":bd<CR>", opts)
+
+  keymap("n", "S", ":%s/", opts)
+  keymap("v", "S", 'y:<c-u>%s/<c-r>"/', opts)
+
 -- Insert --
-  keymap("i", "jj", "<ESC>", opts)
+  keymap("i", "jk", "<ESC>", opts)
+  keymap("i", "kj", "<ESC>", opts)
+  keymap("i", "<C-H>", "<C-w>", opts)
 
 
 -- Visual --

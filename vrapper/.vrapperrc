@@ -1,6 +1,15 @@
 imap jk <esc>
+imap kj <esc>
+
 noremap H :bprevious<CR>
 noremap L :bnext<CR>
+
+
+noremap S :%s/
+vmap S y:<c-u>%s/<c-r>"/
+
 set autoindent
 set ignorecase
 set hlsearch
+set incsearch
+set nospell
