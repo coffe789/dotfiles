@@ -3,13 +3,14 @@ imap kj <esc>
 
 noremap H :bprevious<CR>
 noremap L :bnext<CR>
-
-
 noremap S :%s/
+
 vmap S y:<c-u>%s/<c-r>"/
+vmap p "_dP
 
 set autoindent
 set ignorecase
 set hlsearch
 set incsearch
 set nospell
+set clipboard=unnamedplus

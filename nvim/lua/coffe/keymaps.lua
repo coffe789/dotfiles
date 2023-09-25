@@ -19,7 +19,10 @@ vim.g.maplocalleader = " "
   keymap("n", "gj", "j", opts)
   keymap("n", "gk", "k", opts)
 
-  keymap("n", "z=", "z=1<CR><CR>", opts)
+  keymap("n", "z=", "1z=", opts)
+
+  keymap("n", "<C-Enter>", "o<ESC>", opts)
+  keymap("n", "<C-s-Enter>", "O<ESC>", opts)
 
   -- Better window navigation
   keymap("n", "<C-h>", "<C-w>h", opts)
@@ -47,7 +50,7 @@ vim.g.maplocalleader = " "
   --keymap("n", "<C-d>", ":bd<CR>", opts)
 
   keymap("n", "S", ":%s/", opts)
-  keymap("v", "S", 'y:<c-u>%s/<c-r>"/', opts)
+  keymap("v", "S", '"0y:<c-u>%s/<c-r>0/', opts)
 
 -- Insert --
   keymap("i", "jk", "<ESC>", opts)
