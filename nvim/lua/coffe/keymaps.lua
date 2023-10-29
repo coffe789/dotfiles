@@ -53,7 +53,6 @@ vim.g.maplocalleader = " "
 
 -- Insert --
   keymap("i", "jk", "<ESC>", opts)
-  keymap("i", "kj", "<ESC>", opts)
   keymap("i", "<C-H>", "<C-w>", opts)
 
 
