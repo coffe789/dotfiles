@@ -47,9 +47,8 @@ vim.g.maplocalleader = " "
   keymap("n", "<S-l>", ":bnext<CR>", opts)
   keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
-  --keymap("n", "<C-d>", ":bd<CR>", opts)
+  keymap("n", "<C-w>", ":bd<CR>", opts)
 
-  keymap("n", "S", ":%s/", opts)
   keymap("v", "S", '"0y:<c-u>%s/<c-r>0/', opts)
 
 -- Insert --
