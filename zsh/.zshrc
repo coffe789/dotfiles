@@ -19,6 +19,8 @@ alias gp="git push"
 alias gl="git pull"
 alias nv="nvim"
 alias gc="git checkout"
+alias gcm="git commit -m"
+alias wok="cd /home/jonathand/b4_workspace"
 
 # Fuzzy completion
 zstyle ':completion:*' matcher-list '' \
