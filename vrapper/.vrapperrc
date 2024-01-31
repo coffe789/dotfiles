@@ -1,4 +1,7 @@
 imap jk <esc>
+imap Jk <esc>
+imap JK <esc>
+imap jK <esc>
 
 noremap H :bprevious<CR>
 noremap L :bnext<CR>
