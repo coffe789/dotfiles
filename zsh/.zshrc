@@ -20,6 +20,7 @@ alias gl="git pull"
 alias nv="nvim"
 alias gc="git checkout"
 alias gcm="git commit -m"
+alias gacm="git add -A && git commit -m"
 alias wok="cd /home/jonathand/b4_workspace"
 
 # Fuzzy completion
@@ -27,3 +28,7 @@ zstyle ':completion:*' matcher-list '' \
   'm:{a-z\-}={A-Z\_}' \
   'r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}' \
   'r:|?=** m:{a-z\-}={A-Z\_}'
+
+# Disable annoying autocorroct thing
+unsetopt correct_all
+unsetopt correct
