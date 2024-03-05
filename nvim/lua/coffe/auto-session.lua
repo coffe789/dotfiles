@@ -1,4 +1,4 @@
-local ok_status, auto_session = pcall(require, 'auto_session')
+local ok_status, auto_session = pcall(require, 'auto-session')
 
 if not ok_status then
   return
