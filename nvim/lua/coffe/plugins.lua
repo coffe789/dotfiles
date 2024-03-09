@@ -83,7 +83,7 @@ return packer.startup(function(use)
 
   -- Window
   use "kyazdani42/nvim-tree.lua"
-  require'nvim-tree'.setup {}
+  
   -- Tab
   use "akinsho/bufferline.nvim"
 
