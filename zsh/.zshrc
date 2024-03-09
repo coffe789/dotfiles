@@ -22,11 +22,15 @@ alias gc="git checkout"
 alias gcm="git commit -m"
 alias gacm="git add -A && git commit -m"
 alias gdn="git diff --name-status"
-alias wok="cd /home/jonathand/b4_workspace"
 alias hgrep="history 0 | grep"
 alias la="ls -a"
 alias ll="ls -l"
 alias ri="rg -i"
+
+# cd aliases
+alias wok="cd /home/jonathand/b4_workspace"
+alias gnd="cd /home/jonathand/b4_workspace/utilities/bfg2"
+alias dot="cd /home/jonathand/.dotfiles"
 
 # Fuzzy completion
 zstyle ':completion:*' matcher-list '' \
@@ -37,3 +41,6 @@ zstyle ':completion:*' matcher-list '' \
 # Disable annoying autocorroct thing
 unsetopt correct_all
 unsetopt correct
+
+# cd magic
+CDPATH=:~:~/b4_workspace:~/Documents
