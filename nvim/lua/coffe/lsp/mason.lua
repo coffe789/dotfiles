@@ -4,7 +4,8 @@ local servers = {
 	"pyright",
 	"jsonls",
   "clangd",
-  "quick_lint_js",
+  "biome"
+  -- "quick_lint_js",
 }
 
 local settings = {
