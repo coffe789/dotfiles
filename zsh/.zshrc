@@ -26,11 +26,7 @@ alias hgrep="history 0 | grep"
 alias la="ls -a"
 alias ll="ls -l"
 alias ri="rg -i"
-
-# cd aliases
-alias wok="cd /home/jonathand/b4_workspace"
-alias gnd="cd /home/jonathand/b4_workspace/utilities/bfg2"
-alias dot="cd /home/jonathand/.dotfiles"
+alias syu="sudo pacman -Syu"
 
 # Fuzzy completion
 zstyle ':completion:*' matcher-list '' \
@@ -44,3 +40,10 @@ unsetopt correct
 
 # cd magic
 CDPATH=:~:~/b4_workspace:~/Documents
+
+# cd aliases
+alias wok="cd /home/jonathand/b4_workspace"
+alias gnd="cd /home/jonathand/b4_workspace/utilities/bfg2"
+alias dot="cd /home/jonathand/.dotfiles"
+alias proto="cd /home/jonathand/b4_workspace/common/stm-kria/protobufs"
+
