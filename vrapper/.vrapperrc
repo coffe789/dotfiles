@@ -5,6 +5,10 @@ imap jK <esc>
 
 noremap H :bprevious<CR>
 noremap L :bnext<CR>
+noremap S "_diwP
+noremap [[ [[zz
+noremap ]] ]]zz
+noremap @@ Q
 
 vmap S y:<c-u>%s/<c-r>"/
 vmap p "_dP

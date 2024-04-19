@@ -54,11 +54,14 @@ vim.g.maplocalleader = " "
   -- Other
   keymap("n", "<leader>n", ':noh<CR>', opts)
   keymap("v", "S", '"0y:<c-u>%s/<c-r>0/', opts) -- ??
+  keymap("n", "S", '"_diwP', opts)
+
+  keymap("n", "[[", "[[zz", opts)
+  keymap("n", "]]", "]]zz", opts)
 
 -- Insert --
   keymap("i", "jk", "<ESC>", opts)
   keymap("i", "<C-H>", "<C-w>", opts)
-
 
 -- Visual --
   -- Stay in indent mode
