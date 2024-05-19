@@ -9,6 +9,8 @@ noremap S "_diwP
 noremap [[ [[zz
 noremap ]] ]]zz
 noremap @@ Q
+nnoremap <SPACE>. '[V']>
+nnoremap <SPACE>, '[V']<
 
 vmap S y:<c-u>%s/<c-r>"/
 vmap p "_dP

@@ -1,13 +1,7 @@
-require "coffe.plugins"
-require "coffe.options"
-require "coffe.keymaps"
-require "coffe.colorscheme"
-require "coffe.cmp"
-require "coffe.lsp"
-require "coffe.telescope"
-require "coffe.nvim-lastplace"
-require "coffe.treesitter"
-require "coffe.live-server"
-require "coffe.auto-session"
-require "coffe.bufferline"
-require "coffe.nvim-tree"
+vim.g.mapleader = ' ' --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
+vim.g.maplocalleader = ' '
+
+require 'options'
+require 'keymaps'
+require 'lazy-bootstrap'
+require 'lazy-plugins'

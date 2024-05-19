@@ -55,6 +55,8 @@ vim.g.maplocalleader = " "
   keymap("n", "<leader>n", ':noh<CR>', opts)
   keymap("v", "S", '"0y:<c-u>%s/<c-r>0/', opts) -- ??
   keymap("n", "S", '"_diwP', opts)
+  keymap("n", "<leader>.", "'[V']>", opts)
+  keymap("n", "<leader>,", "'[V']<", opts)
 
   keymap("n", "[[", "[[zz", opts)
   keymap("n", "]]", "]]zz", opts)
