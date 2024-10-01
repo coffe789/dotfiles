@@ -15,7 +15,7 @@ require('lazy').setup({
   require 'custom/plugins/which-key',
   require 'custom/plugins/telescope',
   require 'custom/plugins/lspconfig',
-  require 'custom/plugins/conform',
+  -- require 'custom/plugins/conform',
   require 'custom/plugins/cmp',
   require 'custom/plugins/tokyonight',
   require 'custom/plugins/todo-comments',
@@ -23,11 +23,11 @@ require('lazy').setup({
   require 'custom/plugins/treesitter',
   require 'custom.plugins.debug',
   require 'custom.plugins.indent_line',
-  require 'custom.plugins.lint',
+  -- require 'custom.plugins.lint',
   require 'custom.plugins.autopairs',
   require 'custom.plugins.neo-tree',
   require 'custom.plugins.auto-session',
-  require 'custom.plugins.bufferline',
+  -- require 'custom.plugins.bufferline',
 }, {
   ui = {
     icons = {

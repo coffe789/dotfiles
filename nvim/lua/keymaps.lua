@@ -48,10 +48,10 @@ keymap('v', 'S', '"0y:<c-u>%s/<c-r>0/') -- (:
 keymap('n', 'S', '"_diwP')
 keymap('n', '<leader>.', "'[V']>") -- indent what was previously pasted
 keymap('n', '<leader>,', "'[V']<")
-keymap('n', '[[', '[[zz')
-keymap('n', ']]', ']]zz')
+keymap('n', '[[', '[[zt')
+keymap('n', ']]', ']]zt')
 keymap('i', 'jk', '<ESC>')
-keymap('n', '<c-q>', '<cmd>bd<cr>')
+keymap('n', '<C-q>', '<cmd>bd<cr>')
 
 -- [[ Autocommands ]]
 -- Highlight when yanking (copying) text

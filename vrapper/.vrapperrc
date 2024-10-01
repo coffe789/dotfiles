@@ -6,11 +6,13 @@ imap jK <esc>
 noremap H :bprevious<CR>
 noremap L :bnext<CR>
 noremap S "_diwP
-noremap [[ [[zz
-noremap ]] ]]zz
-noremap @@ Q
+noremap [[ [[zt5k5j
+noremap ]] ]]zt5k5j
+noremap Q @@
 nnoremap <SPACE>. '[V']>
 nnoremap <SPACE>, '[V']<
+nnoremap zt zt5k5j
+nnoremap <esc> :noh<cr>
 
 vmap S y:<c-u>%s/<c-r>"/
 vmap p "_dP
