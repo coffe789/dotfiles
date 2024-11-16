@@ -91,7 +91,7 @@ return {
 
         -- If we want an entire language plugin we could use this
         --    https://github.com/pmizio/typescript-tools.nvim
-        tsserver = {},
+        -- tsserver = {}, -- This does not seem to work
 
         lua_ls = {
           settings = {

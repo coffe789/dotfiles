@@ -53,6 +53,7 @@ keymap('n', ']]', ']]zt')
 keymap('i', 'jk', '<ESC>')
 keymap('n', '<C-q>', '<cmd>bd<cr>')
 
+
 -- [[ Autocommands ]]
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd('TextYankPost', {
