@@ -7,8 +7,8 @@ local keymap = vim.keymap.set
 vim.opt.hlsearch = true
 
 -- Diagnostic keymaps
-keymap('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
-keymap('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
+keymap('n', '<leader>k', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
+keymap('n', '<leader>j', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
 keymap('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 --  Use CTRL+<hjkl> to switch between windows
@@ -52,7 +52,10 @@ keymap('n', '[[', '[[zt')
 keymap('n', ']]', ']]zt')
 keymap('i', 'jk', '<ESC>')
 keymap('n', '<C-q>', '<cmd>bd<cr>')
+keymap('n', '<leader>bd', '<cmd>bufdo bd<cr>')
 
+keymap('n', '<leader>pp', '<cmd>w<cr>:!python3 %<cr>')
+keymap('n', '<leader>pc', '<cmd>w<cr><cmd>!gcc % -o /tmp/a.out && /tmp/a.out<cr>')
 
 -- [[ Autocommands ]]
 -- Highlight when yanking (copying) text

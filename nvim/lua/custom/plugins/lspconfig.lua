@@ -34,7 +34,22 @@ return {
           map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
           map('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
           map('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
-          map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
+          map('<leader>rn', function()
+            vim.api.nvim_create_autocmd({ "CmdlineEnter" }, {
+                callback = function()
+                    local key = vim.api.nvim_replace_termcodes("<C-f>", true, false, true)
+                    vim.api.nvim_feedkeys(key, "c", false)
+                    vim.api.nvim_feedkeys("0", "n", false)
+                    return true
+                end,
+            })
+            vim.lsp.buf.rename() end, '[R]e[n]ame')
+          -- Close cmd line with esc after rename
+          vim.api.nvim_create_autocmd({ "CmdwinEnter" }, {
+                  callback = function()
+                          vim.keymap.set("n", "<esc>", ":quit<CR>", { buffer = true })
+                  end,
+          })
           map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
           -- Fuzzy find all the symbols in your current document.

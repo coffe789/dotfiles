@@ -22,6 +22,7 @@ require('lazy').setup({
   require 'custom.plugins.neo-tree',      -- View file tree
   require 'custom.plugins.auto-session',  -- Remember stuff
   require 'custom.plugins.cokeline',      -- Buffers are visible at top of screen
+  require 'custom.plugins.harpoon',       -- Funny moustache man...
 }, {
   ui = {
     icons = {
