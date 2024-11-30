@@ -120,7 +120,7 @@ return
       ---@type nil | string | function(buffer: Buffer): string,
       bg = function(buffer)
         local hlgroups = require("cokeline.hlgroups")
-        return buffer.is_focused and hlgroups.get_hl_attr("Visual", "bg") or hlgroups.get_hl_attr("ColorColumn", "bg")
+        return buffer.is_focused and hlgroups.get_hl_attr("PmenuSel", "bg") or hlgroups.get_hl_attr("ColorColumn", "bg")
         -- if buffer.is_focused then return '#FFFFFF' end
         -- return '#AAAAAA'
       end,
@@ -179,6 +179,6 @@ return
       components = {},
     },
       })
-    end
+    end,
   }
 
