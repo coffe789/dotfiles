@@ -38,15 +38,16 @@ zstyle ':completion:*' matcher-list '' \
 unsetopt correct_all
 unsetopt correct
 
-# cd magic
-CDPATH=:~:~/b4_workspace:~/Documents
+# cd magic (is annoying...)
+# CDPATH=:~
 
 # cd aliases
-alias wok="cd /home/jonathand/b4_workspace"
-alias gnd="cd /home/jonathand/b4_workspace/utilities/bfg2"
+alias wok="cd /home/jonathand/sky5"
+alias gnd="cd /home/jonathand/sky5/Utilities/bfg2"
 alias dot="cd /home/jonathand/.dotfiles"
-alias proto="cd /home/jonathand/b4_workspace/common/stm-kria/protobufs"
+alias proto="cd /home/jonathand/sky5/Shared/protobufs"
 
+eval "$(ssh-agent -s > /dev/null 2>&1)" # start agent and suppress output
 
 xmodmap -e "keycode 66 = Escape" # Remap caps lock to escape
 xmodmap -e 'clear Lock' # Disable caps locking
