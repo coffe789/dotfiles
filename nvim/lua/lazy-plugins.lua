@@ -9,7 +9,6 @@ require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
 
   {'tpope/vim-sleuth'},                   -- Detect tabstop and shiftwidth automatically
-  { 'numToStr/Comment.nvim', opts = {} }, -- `gc` to comment visual regions/lines
   require 'custom/plugins/gitsigns',      -- Show which lines have changed on git
   require 'custom/plugins/telescope',     -- Search
   require 'custom/plugins/lspconfig',     -- LSP

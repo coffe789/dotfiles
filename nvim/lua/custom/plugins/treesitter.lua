@@ -2,7 +2,6 @@ return {
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
-    lazy = vim.fn.argc(-1) == 0, -- load treesitter early when opening a file from the cmdline
     opts = {
       ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' }, -- NOTE: Enabling this sometimes causes dumb errors when launching
       -- Autoinstall languages that are not installed

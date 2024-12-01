@@ -1,7 +1,6 @@
 return {
   { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
-    lazy = true,
     dependencies = {
       -- Automatically install LSPs and related tools to stdpath for Neovim
       { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
@@ -101,7 +100,9 @@ return {
       capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
       local servers = {
-        clangd = {},
+        clangd = {
+          -- vim.keymap.set('n', '<leader>b', '<cmd>ClangdSwitchSourceHeader<cr>')
+        },
         gopls = {},
         pyright = {},
 
