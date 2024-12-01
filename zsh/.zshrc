@@ -51,3 +51,5 @@ eval "$(ssh-agent -s > /dev/null 2>&1)" # start agent and suppress output
 
 xmodmap -e "keycode 66 = Escape" # Remap caps lock to escape
 xmodmap -e 'clear Lock' # Disable caps locking
+
+source zsh_secret
