@@ -13,6 +13,11 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
 
+# Secret API keys
+# if [[ -e ./zsh_secret ]]; then
+  source ./zsh_secret
+# fi
+
 # Aliases
 alias gst="git status"
 alias gp="git push"
@@ -48,5 +53,3 @@ alias dot="cd /home/jonathand/.dotfiles"
 alias proto="cd /home/jonathand/sky5/Shared/protobufs"
 
 eval "$(ssh-agent -s > /dev/null 2>&1)" # start agent and suppress output
-
-source zsh_secret
