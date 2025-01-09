@@ -36,19 +36,20 @@ return {
           map('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
           map('<leader>rn', function()
             vim.api.nvim_create_autocmd({ "CmdlineEnter" }, {
-                callback = function()
-                    local key = vim.api.nvim_replace_termcodes("<C-f>", true, false, true)
-                    vim.api.nvim_feedkeys(key, "c", false)
-                    vim.api.nvim_feedkeys("0", "n", false)
-                    return true
-                end,
+              callback = function()
+                local key = vim.api.nvim_replace_termcodes("<C-f>", true, false, true)
+                vim.api.nvim_feedkeys(key, "c", false)
+                vim.api.nvim_feedkeys("0", "n", false)
+                return true
+              end,
             })
-            vim.lsp.buf.rename() end, '[R]e[n]ame')
+            vim.lsp.buf.rename()
+          end, '[R]e[n]ame')
           -- Close cmd line with esc after rename
           vim.api.nvim_create_autocmd({ "CmdwinEnter" }, {
-                  callback = function()
-                          vim.keymap.set("n", "<esc>", ":quit<CR>", { buffer = true })
-                  end,
+            callback = function()
+              vim.keymap.set("n", "<esc>", ":quit<CR>", { buffer = true })
+            end,
           })
           map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
@@ -100,9 +101,7 @@ return {
       capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
       local servers = {
-        clangd = {
-          -- vim.keymap.set('n', '<leader>b', '<cmd>ClangdSwitchSourceHeader<cr>')
-        },
+        clangd = {},
         gopls = {},
         pyright = {},
 

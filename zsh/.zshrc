@@ -14,9 +14,9 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
 fi
 
 # Secret API keys
-# if [[ -e ./zsh_secret ]]; then
-  source ./zsh_secret
-# fi
+if [[ -e ~/.dotfiles/zsh/zsh_secret ]]; then
+  source ~/.dotfiles/zsh/zsh_secret
+fi
 
 # Aliases
 alias gst="git status"
@@ -52,4 +52,6 @@ alias gnd="cd /home/jonathand/sky5/Utilities/bfg2"
 alias dot="cd /home/jonathand/.dotfiles"
 alias proto="cd /home/jonathand/sky5/Shared/protobufs"
 
-eval "$(ssh-agent -s > /dev/null 2>&1)" # start agent and suppress output
+bindkey '^y' autosuggest-accept
+
+eval "$(ssh-agent -s)" # > /dev/null 2>&1)" # start agent and suppress output # Does not seem to launch at all?

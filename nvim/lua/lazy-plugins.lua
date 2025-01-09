@@ -8,7 +8,7 @@
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
 
-  {'tpope/vim-sleuth'},                   -- Detect tabstop and shiftwidth automatically
+  { 'tpope/vim-sleuth' },                 -- Detect tabstop and shiftwidth automatically
   require 'custom/plugins/gitsigns',      -- Show which lines have changed on git
   require 'custom/plugins/telescope',     -- Search
   require 'custom/plugins/lspconfig',     -- LSP
@@ -22,6 +22,7 @@ require('lazy').setup({
   require 'custom.plugins.cokeline',      -- Buffers are visible at top of screen
   require 'custom.plugins.nightfox',      -- Pretty colors
   require 'custom.plugins.ouroboros',     -- Clangd switch to header files
+  require 'custom.plugins.markview',      -- Markdown
 
   -- require 'custom/plugins/tokyonight',    -- Colors
   -- require 'custom.plugins.autopairs',  -- Automatically complete brackets, quotes, etc..
