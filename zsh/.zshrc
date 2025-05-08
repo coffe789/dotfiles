@@ -24,6 +24,8 @@ alias gp="git push"
 alias gl="git pull"
 alias nv="nvim"
 alias gc="git checkout"
+alias gr="git restore"
+alias grs="git restore -S"
 alias gcm="git commit -m"
 alias gacm="git add -A && git commit -m"
 alias gdn="git diff --name-status"
@@ -51,7 +53,5 @@ alias wok="cd /home/jonathand/sky5"
 alias gnd="cd /home/jonathand/sky5/Utilities/bfg2"
 alias dot="cd /home/jonathand/.dotfiles"
 alias proto="cd /home/jonathand/sky5/Shared/protobufs"
-
-bindkey '^y' autosuggest-accept
 
 eval "$(ssh-agent -s)" # > /dev/null 2>&1)" # start agent and suppress output # Does not seem to launch at all?
